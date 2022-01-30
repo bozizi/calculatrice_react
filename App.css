@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #099cec, #326ce5);
+}
+
+.app {
+  height: auto;
+  min-height: 100%;
+}
+
+.screen {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeaderBarre {
+  background: white;
+  height:80px;
+  display:flex;
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.33);
+  align-items: center;
+}
+
+.HeaderBarre_texte {
+  display: flex;
+  align-items: baseline;
+}
+
+.HeaderBarre_titre {
+  color: #61dafb;
+  font-size: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.HeaderBarre_soustitre {
+  color: #35bbf4;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.HeadBarre_logo{
+  height: 80%;
+}
+
+.calculatrice {
+  display: grid;
+  padding: 1.5rem;
+  border-radius: 2.5rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  background-color: rgb(19, 19, 19);
+  height: fit-content;
+  width:fit-content;
+  box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.33);
+  margin-top: 40px;
+}
+
+.calculatrice > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 0px;
+  outline: none;
+  background-color: rgba(255, 255, 255, .15);
+  border-radius: 25em;
+  margin: 5px;
+}
+
+.bouton-chiffre {
+  color: white;
+}
+
+.boutton-operation{
+  color: greenyellow;
+}
+
+.calculatrice > button:hover,
+.calculatrice > button:focus {
+  background-color: rgba(255, 255, 255, .25);
+}
+
+.calculatrice > button:active{
+  font-size: 2.5rem;
+  background-color: rgba(255, 255, 255, .35);
+}
+
+.AC {
+  grid-column: span 2;
+  color:red;
+}
+
+.egal {
+  grid-column: span 2;
+  color:greenyellow;
+}
+
+.del {
+  color:greenyellow
+}
+
+.calculatrice-ecran {
+  grid-column: 1 / -1;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 1.5rem;
+}
+
+.calculatrice-ecran .derniere-operation {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.calculatrice-ecran .operation-actuelle {
+  color: white;
+  font-size: 2.5rem;
+}
